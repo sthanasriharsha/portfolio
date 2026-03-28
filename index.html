@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sriharsha | AI & ML Engineer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- AOS Animate on Scroll CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ─────────────────────────────────────────
+       CURSOR GLOW
+       A soft glow circle that follows the mouse.
+       Controlled by script.js
+  ──────────────────────────────────────────── -->
+  <div class="cursor-glow" id="cursorGlow"></div>
+
+  <!-- ─────────────────────────────────────────
+       NAVIGATION
+       Fixed top bar. Links use #id to jump to
+       sections. .nav-cta is the "Contact" button.
+  ──────────────────────────────────────────── -->
+  <nav id="mainNav">
+    <a href="#hero" class="nav-logo">GSS<span>.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#certifications">Certs</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+
+    <!-- Hamburger button for mobile -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1 — HERO
+       First thing visitors see. Contains your
+       name, typed-text role, intro, and CTA buttons.
+  ═══════════════════════════════════════════════ -->
+  <section id="hero">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+
+    <div class="hero-content">
+
+      <!-- Status badge — change the text here -->
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Available for opportunities
+      </div>
+
+      <!--
+        YOUR NAME — Edit this!
+        .accent makes "Sriharsha" green
+      -->
+      <h1 class="hero-name">
+        Sthana<br /><span class="accent">Sriharsha</span>
+      </h1>
+
+      <!--
+        TYPED TEXT — The roles cycle here.
+        To change the roles, edit the `roles`
+        array inside script.js
+      -->
+      <div class="hero-typed-wrap">
+        <span id="typed-text"></span><span class="typed-cursor">|</span>
+      </div>
+
+      <!--
+        SHORT BIO — Edit this description
+      -->
+      <p class="hero-desc">
+        CS graduate specialising in <strong>AI & Data Science</strong>, currently working as AI-ML intern at
+        <strong>C-DAC Thiruvananthapuram</strong>. I build deep learning solutions for
+        real-world problems — from Sign Language recognition to intelligent document analysis.
+      </p>
+
+      <!-- CTA Buttons -->
+      <div class="hero-actions">
+        <a href="#projects" class="btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          View My Work
+        </a>
+        <a href="resume.pdf" download class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+
+      <!-- Social links — update hrefs with your real URLs -->
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/gundumalla-sthana-sriharsha-a23472300/" target="_blank" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/sthanasriharsha" target="_blank" aria-label="GitHub">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+        </a>
+        <a href="mailto:sthanasriharsha@gmail.com" aria-label="Email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 6 10-6"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <div class="line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2 — ABOUT
+       Left: photo frame. Right: bio + stats.
+       Replace "GSS" placeholder with <img> tag
+       once you have a photo.
+  ═══════════════════════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Photo side -->
+        <div class="about-image-wrap" data-aos="fade-right">
+          <div class="about-image-frame">
+            <!--
+              HOW TO ADD YOUR PHOTO:
+              1. Put your photo in the assets/ folder
+              2. Delete the <span class="avatar-placeholder"> line
+              3. Uncomment the <img> line below
+            -->
+            <img src="photo1.jpeg" alt="Sriharsha" class="about-photo" />
+            <!-- <img src="assets/photo.jpg" alt="Sriharsha" class="about-photo" /> -->
+
+            <!-- Decorative floating badge -->
+            <div class="about-badge">
+              <div class="badge-icon">🎓</div>
+              <div>
+                <div class="badge-label">Currently at</div>
+                <div class="badge-value">AIML Intern at C-DAC, TVM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text side -->
+        <div class="about-text" data-aos="fade-left" data-aos-delay="100">
+          <p class="section-label">About Me</p>
+          <h2 class="section-title">Building AI that<br />actually works.</h2>
+
+          <!--
+            EDIT YOUR BIO PARAGRAPHS HERE
+          -->
+          <p>
+            I'm <strong>Gundumalla Sthana Sriharsha</strong>, a Computer Science graduate
+            specialising in AI & Data Science from GNIT, Hyderabad (Class of 2025).
+          </p>
+          <p>
+            Currently an <strong>AI/ML Intern at C-DAC Thiruvananthapuram</strong>, working on
+            deep learning approaches for Indian Sign Language (ISL).
+          </p>
+          <p>
+            My passion is bridging research and real applications.
+          </p>
+
+          <!-- Stats — edit the numbers and labels -->
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-num">3+</div>
+              <div class="stat-desc">Projects built</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">2</div>
+              <div class="stat-desc">Internships</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num">7.38</div>
+              <div class="stat-desc">CGPA (B.Tech)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3 — SKILLS
+       Skills grouped into categories.
+       To add/remove a skill: edit the <span> tags
+       inside .skill-tags
+  ═══════════════════════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Technical Skills</p>
+        <h2 class="section-title">What I work with</h2>
+        <p class="section-sub">Technologies and tools I've used across projects and internships.</p>
+      </div>
+
+      <div class="skills-categories">
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="0">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon">🐍</div> Languages
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="80">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon">🤖</div> AI & Machine Learning
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">OpenCV</span>
+            <span class="skill-tag">Deep Learning</span>
+            <span class="skill-tag">Supervised Learning</span>
+            <span class="skill-tag">Unsupervised Learning</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="160">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon">📦</div> Libraries & Frameworks
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">Streamlit</span>
+          </div>
+        </div>
+
+        <div class="skill-category" data-aos="fade-up" data-aos-delay="240">
+          <div class="skill-cat-title">
+            <div class="skill-cat-icon">🛠</div> Tools & Platforms
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">OpenAI API</span>
+            <span class="skill-tag">Netlify</span>
+            <span class="skill-tag">Jupyter</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4 — EXPERIENCE
+       Timeline layout. To add a new job:
+       copy one .timeline-item block and edit it.
+  ═══════════════════════════════════════════════ -->
+  <section id="experience">
+    <div class="container">
+      <div class="exp-grid">
+
+        <!-- Sticky left header -->
+        <div class="exp-sticky" data-aos="fade-right">
+          <p class="section-label">Experience</p>
+          <h2 class="section-title">Where I've<br />worked</h2>
+          <p class="section-sub">Internships and training that shaped my skills.</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline" data-aos="fade-left">
+
+          <!-- INTERNSHIP 1 — Edit role, company, period, description, tags -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <div class="timeline-role">AI/ML Intern</div>
+                  <div class="timeline-company">C-DAC, Thiruvananthapuram</div>
+                </div>
+                <span class="timeline-period">Present</span>
+              </div>
+              <p class="timeline-desc">
+                Exploring deep learning approaches for building the AI models for Indian Sign
+                Language (ISL). Collaborating with technical teams on research-oriented projects and
+                developing AI-driven solutions for accessibility.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Deep Learning</span>
+                <span class="timeline-tag">Sign Language AI</span>
+                <span class="timeline-tag">Research</span>
+                <span class="timeline-tag">Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- INTERNSHIP 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-head">
+                <div>
+                  <div class="timeline-role">AI-ML Intern</div>
+                  <div class="timeline-company">Google for Developers × AICTE</div>
+                </div>
+                <span class="timeline-period">Oct – Dec 2024</span>
+              </div>
+              <p class="timeline-desc">
+                Completed an intensive AI-ML training under the Google for Developers initiative endorsed
+                by AICTE. Worked on ML fundamentals, model evaluation, and deploying ML models in
+                production-ready environments.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Machine Learning</span>
+                <span class="timeline-tag">Google Cloud</span>
+                <span class="timeline-tag">Model Deployment</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- end .timeline -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5 — PROJECTS
+       Each .project-card is one project.
+       To add a project: copy a card block, edit it.
+       Update href="#" links to real GitHub/demo URLs.
+  ═══════════════════════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="projects-header" data-aos="fade-up">
+        <div>
+          <p class="section-label">Projects</p>
+          <h2 class="section-title">Things I've built</h2>
+        </div>
+        <!-- Update this link to your real GitHub -->
+        <a href="https://github.com/sthanasriharsha" target="_blank" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          All on GitHub
+        </a>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- PROJECT 1 — Edit title, desc, stack, links -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-number">01</div>
+          <div class="project-icon">🌃</div>
+          <h3 class="project-title">Low Light Image Enhancement</h3>
+          <p class="project-desc">
+            Python-based system to improve quality of nighttime roadside images for intelligent
+            transportation. Implements bidirectional area segmentation-based inverse tone mapping.
+            Deployed as a Flask web app with real-time processing.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">OpenCV</span>
+            <span class="stack-tag">Flask</span>
+            <span class="stack-tag">NumPy</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sthanasriharsha/LOW_LIGHT_IMAGE_ENHANCEMENT.git" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://low-light-image-enhancement-m2yb.onrender.com/" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-number">02</div>
+          <div class="project-icon">🤖</div>
+          <h3 class="project-title">AI Document Assistant</h3>
+          <p class="project-desc">
+            Web-based AI assistant for intelligent document analysis with contextual Q&A and
+            auto-summarization. Powered by OpenAI GPT-4 for deep document understanding
+            and context retention across multi-turn conversations.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Streamlit</span>
+            <span class="stack-tag">OpenAI GPT-4</span>
+            <span class="stack-tag">NLP</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sthanasriharsha/ai-doc-assistant.git" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://github.com/sthanasriharsha/ai-doc-assistant.git" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 3 — -->
+        <div class="project-card project-card--wip" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-number">03</div>
+          <div class="project-icon">🔬</div>
+          <h3 class="project-title">Pose Normalization for Sign Language</h3>
+          <p class="project-desc">
+            Developed a pose normalization pipeline to standardize human keypoints extracted from video data,
+            improving consistency across different scales, positions, and viewing angles for sign language recognition tasks. — under active development at C-DAC Thiruvananthapuram.
+          </p>
+          <div class="project-stack">
+            <span class="stack-tag">PyTorch</span>
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">Computer Vision</span>
+            <span class="stack-tag">Pose Estimation</span>
+            <span class="stack-tag">NumPy</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/sthanasriharsha/pose-normalization-pipeline" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+              GitHub
+            </a>
+            <a href="https://github.com/sthanasriharsha/pose-normalization-pipeline" class="project-link">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end .projects-grid -->
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6 — CERTIFICATIONS
+       To add a cert: copy a .cert-card and edit it.
+  ═══════════════════════════════════════════════ -->
+  <section id="certifications">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <p class="section-label">Certifications</p>
+        <h2 class="section-title">Credentials &amp; Achievements</h2>
+        <p class="section-sub">Recognized training from global technology organizations.</p>
+      </div>
+
+      <div class="certs-grid">
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="cert-icon">🐍</div>
+          <div>
+            <div class="cert-name">Programming Foundations with Python</div>
+            <div class="cert-issuer">Cisco Networking Academy</div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="60">
+          <div class="cert-icon">🌐</div>
+          <div>
+            <div class="cert-name">Web Development</div>
+            <div class="cert-issuer">IBM SkillsBuild</div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="120">
+          <div class="cert-icon">📊</div>
+          <div>
+            <div class="cert-name">Introduction to Data Science</div>
+            <div class="cert-issuer">Cisco Networking Academy</div>
+          </div>
+        </div>
+
+        <div class="cert-card" data-aos="fade-up" data-aos-delay="180">
+          <div class="cert-icon">🤖</div>
+          <div>
+            <div class="cert-name">AI-ML Training Program</div>
+            <div class="cert-issuer">Google for Developers × AICTE</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 7 — CONTACT
+       Edit your email and social links here.
+  ═══════════════════════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-inner" data-aos="fade-up">
+        <p class="section-label">Contact</p>
+        <h2 class="section-title">Let's work<br />together.</h2>
+        <p class="section-sub">
+          Open to full-time roles, internships, and research collaborations in AI/ML.
+          Don't hesitate to reach out!
+        </p>
+
+        <!-- EDIT YOUR EMAIL HERE -->
+        <a href="mailto:sthanasriharsha@gmail.com" class="contact-email">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 8l10 6 10-6"/></svg>
+          sthanasriharsha@gmail.com
+        </a>
+
+        <div class="contact-social">
+          <a href="https://www.linkedin.com/in/gundumalla-sthana-sriharsha-a23472300/" target="_blank" class="contact-social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/sthanasriharsha" target="_blank" class="contact-social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            GitHub
+          </a>
+          <a href="tel:+918096414909" class="contact-social-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.92-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +91 80964 14909
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─────────────────────────────────────────
+       FOOTER
+  ──────────────────────────────────────────── -->
+  <footer>
+    <p class="footer-copy">
+      © 2025 <span>Gundumalla Sthana Sriharsha</span>. Designed &amp; built from scratch.
+    </p>
+    <button class="footer-top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+      Back to top
+    </button>
+  </footer>
+
+
+  <!-- AOS Library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Your script -->
+  <script src="script.js"></script>
+
+</body>
+</html>
