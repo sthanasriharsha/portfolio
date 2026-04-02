@@ -93,22 +93,6 @@ portfolio/
 
 ---
 
-## 🏃 Running Locally
-
-```bash
-# Clone the repository
-git clone https://github.com/sthanasriharsha/portfolio.git
-
-# Navigate to the project folder
-cd portfolio
-
-# Open in browser (no build step needed!)
-open index.html
-# or simply drag index.html into your browser
-```
-
----
-
 ## 📬 Contact
 
 | Platform | Link |
