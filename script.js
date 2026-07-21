@@ -56,10 +56,10 @@ document.addEventListener('DOMContentLoaded', () => {
      ============================================================== */
   const roles = [
     'AI & ML Engineer',
+    'GenAI / LLM Developer',
     'Deep Learning Developer',
     'Data Science Graduate',
     'Python Developer',
-    'Problem Solver',
   ];
 
   let roleIndex = 0;   // which role we're currently typing
