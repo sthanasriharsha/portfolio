@@ -117,6 +117,19 @@ body {
   font-family: var(--font-body);
   line-height: 1.7;
   overflow-x: hidden;
+  position: relative;
+}
+
+/* Subtle grain texture — adds modern print-like depth without touching colors */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
 
 a  { text-decoration: none; color: inherit; }
@@ -482,7 +495,19 @@ section {
   animation: fadeUp 0.8s 0.1s ease both;
 }
 
-.hero-name .accent { color: var(--accent); }
+.hero-name .accent {
+  background: linear-gradient(100deg, var(--accent2) 0%, var(--accent) 45%, var(--accent3) 75%, var(--accent) 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: sheen 6s linear infinite;
+}
+
+@keyframes sheen {
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 250% 50%; }
+}
 
 /* Typed text */
 .hero-typed-wrap {
@@ -823,6 +848,8 @@ section {
   background: rgba(176, 125, 74, 0.08);
   border-color: rgba(176, 125, 74, 0.32);
   color: var(--accent2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(100, 70, 40, 0.10);
 }
 
 
@@ -1012,6 +1039,19 @@ section {
 }
 
 .project-card:hover::after { opacity: 1; }
+
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent3), var(--accent), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover::before { transform: scaleX(1); }
 
 .project-card:hover {
   border-color: rgba(176, 125, 74, 0.25);
